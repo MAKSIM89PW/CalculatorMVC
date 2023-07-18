@@ -50,21 +50,24 @@ extension MainViewController: MainStackViewProtocol {
        
         switch tag {
         case 10:
-            print("1111") //.
+            calculationModel.addPointValue()
+            resultLabel.text = calculationModel.getCurrentNumber()//.
         case 11:
             resultLabel.text = calculationModel.getResult() //=
         case 12:
-            calculationModel.setOperation(operation: .addition) // +
+            resultLabel.text = calculationModel.setOperation(operation: .addition) // +
         case 13:
-            calculationModel.setOperation(operation: .substraction) // -
+            resultLabel.text = calculationModel.setOperation(operation: .substraction) // -
         case 14:
-            calculationModel.setOperation(operation: .multyplication) //*
+            resultLabel.text = calculationModel.setOperation(operation: .multyplication) //*
         case 15:
-            calculationModel.setOperation(operation: .division) // /
+            resultLabel.text = calculationModel.setOperation(operation: .division) // /
         case 16:
-            print("1111") // %
+            calculationModel.setPersebntNumber()
+            resultLabel.text = calculationModel.getCurrentNumber()// %
         case 17:
-            print("1111") // +/-
+            calculationModel.invertValue()
+            resultLabel.text = calculationModel.getCurrentNumber()// +/-
         case 18:
             calculationModel.resetValues()
             resultLabel.text = "0" // AC
